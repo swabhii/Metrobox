@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Metrobox</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png
+    " type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-4.1.3.min.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  <script language="JavaScript" type="text/javascript" >
+   
+   
+  //1st endpoint*******   All meals -menu
+     
+  var settings = {
+  
+    "async": true,
+    "crossDomain": true,
+    "url": "https://www.themealdb.com/api/json/v1/1/search.php?f=c",
+    "method": "GET",
+    "headers": {},
+    "data": "{}"  
+  }
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+   document.getElementById("img1").src=response .meals[0].strMealThumb;
+   //  document.getElementById("name1").innerHTML=response .meals[15].strMeal;
+   //  document.getElementById("desc1").innerHTML=response .meals[15].strCategory;
+
+       document.getElementById("img2").src=response .meals[2].strMealThumb;
+    document.getElementById("name2").innerHTML=response .meals[2].strMeal;
+    document.getElementById("desc2").innerHTML=response .meals[2].strCategory;
+
+       document.getElementById("img3").src=response .meals[22].strMealThumb;
+    document.getElementById("name3").innerHTML=response .meals[22].strMeal;
+    document.getElementById("desc3").innerHTML=response .meals[22].strCategory;
+
+       document.getElementById("img4").src=response .meals[27].strMealThumb;
+    document.getElementById("name4").innerHTML=response .meals[27].strMeal;
+    document.getElementById("desc4").innerHTML=response .meals[27].strCategory;
+
+       document.getElementById("img5").src=response .meals[31].strMealThumb;
+    document.getElementById("name5").innerHTML=response .meals[31].strMeal;
+    document.getElementById("desc5").innerHTML=response .meals[31].strCategory;
+
+       document.getElementById("img6").src=response .meals[13].strMealThumb;
+    document.getElementById("name6").innerHTML=response .meals[13].strMeal;
+    document.getElementById("desc6").innerHTML=response .meals[13].strCategory;
+
+  });
+ //end of 1st endpoint*****
+
+// //All meal categories
+
+ var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.themealdb.com/api/json/v1/1/categories.php",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+
+
+       document.getElementById("ci1").src=response .categories[1].strCategoryThumb;
+    document.getElementById("cd1").innerHTML=response .categories[1].strCategoryDescription;
+    document.getElementById("cn1").innerHTML=response .categories[1].strCategory;
+
+      document.getElementById("ci2").src=response .categories[2].strCategoryThumb;
+    document.getElementById("cd2").innerHTML=response .categories[2].strCategoryDescription;
+    document.getElementById("cn2").innerHTML=response .categories[2].strCategory;
+
+      document.getElementById("ci3").src=response .categories[5].strCategoryThumb;
+    document.getElementById("cd3").innerHTML=response .categories[5].strCategoryDescription;
+    document.getElementById("cn3").innerHTML=response .categories[5].strCategory;
+
+      document.getElementById("ci4").src=response .categories[11].strCategoryThumb;
+    document.getElementById("cd4").innerHTML=response .categories[11].strCategoryDescription;
+    document.getElementById("cn4").innerHTML=response .categories[11].strCategory;
+
+     document.getElementById("ci5").src=response .categories[10].strCategoryThumb;
+    document.getElementById("cd5").innerHTML=response .categories[10].strCategoryDescription;
+    document.getElementById("cn5").innerHTML=response .categories[10].strCategory;
+
+ document.getElementById("ci6").src=response .categories[12].strCategoryThumb;
+    document.getElementById("cd6").innerHTML=response .categories[12].strCategoryDescription;
+    document.getElementById("cn6").innerHTML=response .categories[12].strCategory;
+
+ document.getElementById("ci7").src=response .categories[7].strCategoryThumb;
+    document.getElementById("cd7").innerHTML=response .categories[7].strCategoryDescription;
+    document.getElementById("cn7").innerHTML=response .categories[7].strCategory;
+
+
+
+  //document.getElementById("jpg4").src="http://image.tmdb.org/t/p/w185/"+response .results[1].poster_path;
+  //document.getElementById("jpg3").src="http://image.tmdb.org/t/p/w185/"+response .results[13].poster_path;
+});
+// //end of 2nd endpoint******
+
+
+
+// //3rd endpoint*******All Ingredients
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://www.themealdb.com/api/json/v1/1/list.php?i=list",
+    "method": "GET",
+    "headers": {},
+    "data": "{}"
+  }
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+
+      
+    document.getElementById("id1").innerHTML=response .meals[2].strDescription;
+    document.getElementById("in1").innerHTML=response .meals[2].strIngredient;
+
+       document.getElementById("id2").innerHTML=response .meals[12].strDescription;
+    document.getElementById("in2").innerHTML=response .meals[12].strIngredient;
+
+
+   document.getElementById("id3").innerHTML=response .meals[22].strDescription;
+    document.getElementById("in3").innerHTML=response .meals[22].strIngredient;
+
+   document.getElementById("id4").innerHTML=response .meals[16].strDescription;
+    document.getElementById("in4").innerHTML=response .meals[16].strIngredient;
+
+   document.getElementById("id5").innerHTML=response .meals[24].strDescription;
+    document.getElementById("in5").innerHTML=response .meals[24].strIngredient;
+
+   document.getElementById("id6").innerHTML=response .meals[8].strDescription;
+    document.getElementById("in6").innerHTML=response .meals[8].strIngredient;
+
+   document.getElementById("id7").innerHTML=response .meals[9].strDescription;
+    document.getElementById("in7").innerHTML=response .meals[9].strIngredient;
+
+
+    //document.getElementById("jpg6").src="http://image.tmdb.org/t/p/w185/"+response .results[11].poster_path;
+    //document.getElementById("jpg5").src="http://image.tmdb.org/t/p/w185/"+response .results[18].poster_path;
+
+  });
+//   //end of 3rd endpoint*****
+
+
+// //4th endpoint*****Area
+
+  var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.themealdb.com/api/json/v1/1/list.php?a=list",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+$.ajax(settings).done(function (response) {
+  console.log(response);
+
+ // document.getElementById("jpg7").src="http://image.tmdb.org/t/p/w185/"+response .results[14].poster_path;
+ // document.getElementById("jpg8").src="http://image.tmdb.org/t/p/w185/"+response .results[8].poster_path;
+
+});
+// //end of 4th endpoint*****
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script> 
+  
+</head>
+
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Area Starts -->
+	<header class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo-area">
+                        <a href="index.html"><img src="assets/images/logo/logo2.jpg" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="custom-navbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>  
+                    <div class="main-menu">
+                        <ul>
+                            <li class="active"><a href="index.html">home</a></li>
+                            
+                            <li><a href="ingredients2.html">ingredients</a></li>
+                            
+                            <li><a href="chicken.html">specials</a></li>
+                            <li><a href="#categories">categories</a></li>
+                            <li><a href="about.html">about</a></li>
+                            
+                            <li><a href="contact-us.html">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Banner Area Starts -->
+    <section class="banner-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h6>the most interesting food in the world</h6>
+                    <h1>Discover the <span class="prime-color">flavors</span><br>  
+                    <span class="style-change">of <span class="prime-color">metro</span>box</span></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End -->
+
+    <!-- Welcome Area Starts -->
+    <section class="welcome-area section-padding2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-img">
+                        <img src="assets/images/welcome-bg.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-text mt-5 mt-md-0">
+                        <h3><span class="style-change">welcome</span> <br>to metro box</h3>
+                        <p class="pt-3">Hello there! Are you looking for yummy Food? Do you want "Tastes all over the world"? Well if you do, you are exactly at the right place. MetroBox is a metro of boxes filled with happiness, and what defines happiness better than Food? We have every type of dish, veg or non veg, your choice! We have got the best for you!</p>
+                        
+                        <a href="#" class="template-btn mt-3">here are you home food tiffins</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Welcome Area End -->
+
+    <!-- Food Area starts -->
+    <section class="food-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="section-top">
+                        <h3><span class="style-change">we serve</span> <br>delicious food</h3>
+                        <p class="pt-3">Hello there! Are you looking for yummy Food? Do you want "Tastes all over the world"? Well if you do, you are exactly at the right place. MetroBox is a metro of boxes filled with happiness, and what defines happiness better than Food? We have every type of dish, veg or non veg, your choice! We have got the best for you!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food">
+                        <div class="food-img">
+                            <img id="img1" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5 id="name1">Chocolate Gateau</h5>
+                                <span class="style-change">Rs.114</span>
+                            </div>
+                            <p class="pt-3" id="desc1">French</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5 mt-sm-0">
+                        <div class="food-img">
+                            <img id="img2" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5 id="name2"></h5>
+                                <span class="style-change">Rs.99</span>
+                            </div>
+                            <p class="pt-3" id="desc2"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5 mt-md-0">
+                        <div class="food-img">
+                            <img id="img3" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5 id="name3"></h5>
+                                <span class="style-change">Rs.52</span>
+                            </div>
+                            <p class="pt-3" id="desc3"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img id="img4" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5 id="name4"></h5>
+                                <span class="style-change">Rs.64.50</span>
+                            </div>
+                            <p class="pt-3" id="desc4"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img id="img5" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5 id="name5"></h5>
+                                <span class="style-change">Rs.49</span>
+                            </div>
+                            <p class="pt-3" id="desc5"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img id="img6" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5 id="name6"></h5>
+                                <span class="style-change">Rs.70</span>
+                            </div>
+                            <p class="pt-3" id="desc6"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Food Area End -->
+
+    <!-- Reservation Area Starts -->
+    <div class="reservation-area section-padding text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Natural ingredients and testy food</h2>
+                    <h4 class="mt-4">some trendy and popular dishes offered</h4>
+                    <a href="ingredients2.html" class="template-btn template-btn2 mt-4">Check Ingredients</a>
+                    <h4 class="mt-4">Are you a Chicken fan?</h4>
+                    <a href="chicken.html" class="template-btn template-btn2 mt-4">Check Special Chicken Dishes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reservation Area End -->
+  <!--   //categories -->
+
+  <div class="container mt-5" style="border: 2px solid yellow;" id="categories">
+     <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center p-5">
+                        <h3 class="p-4">Our <span>special</span> categories</h3>
+                       
+                    </div>
+                </div>
+    </div>
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    
+                    <div class="deshes-text">
+                         <a href="menu.html"><h3 id="cn1"></h3></a>
+                        <p class="pt-3" id="cd1"></p>
+
+                        
+                       
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img id="ci1" alt="" class="img-fluid">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    
+                    <div class="deshes-text">
+                         <a href="menu.html"><h3 id="cn2"></h3></a>
+                        <p class="pt-3" id="cd2"></p>
+
+                        
+                       
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img id="ci2" alt="" class="img-fluid">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    
+                    <div class="deshes-text">
+                         <a href="menu.html"><h3 id="cn3"></h3></a>
+                        <p class="pt-3" id="cd3"></p>
+
+                        
+                       
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img id="ci3" alt="" class="img-fluid">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    
+                    <div class="deshes-text">
+                         <a href="menu.html"><h3 id="cn4"></h3></a>
+                        <p class="pt-3" id="cd4"></p>
+
+                        
+                       
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img id="ci4" alt="" class="img-fluid">
+                </div>
+            </div>
+
+
+  </div>
+   
+   <!--  List of ingredients -->
+   <!-- <div class="container mt-5">
+    <div class="row">
+   <div class="col-lg-12">
+        <div class="section-top2 text-center p-5">
+            <h3 class="p-4">Our <span>special</span> categories</h3>
+                       
+        </div>
+    </div>
+    </div>
+
+    <div class="  m-4 justify-content-between d-flex">
+        <div class=" p-1">
+            <h3 > Ingredients</h3>
+
+        </div>
+        <div class=" p-1">
+            <h3> Description </h3>
+        </div>
+        <div class="table table-striped">
+            <tr>
+                <div>
+                    <td id="in1"></td>
+                </div>
+                <div>
+                    <td id="id1"></td>
+                </div>
+            </tr>
+            
+
+        </div>
+    </div>
+    
+
+   </div> --> -->
+
+    <!-- Deshes Area Starts -->
+    <div class="deshes-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3>Our <span>special</span> centres</h3>
+                        <p><i>We'll be waiting for you!</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <h1>01.</h1>
+                    <div class="deshes-text">
+                         <a href="menu.html"><h3><span>Sector 17 </span><br> Chandigarh</h3></a>
+                        
+
+                        <a href="#" class="template-btn3 mt-3">contact for ordering a lunchbox <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="assets/images/deshes1.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="assets/images/deshes2.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <h1>02.</h1>
+                    <div class="deshes-text">
+                        <a href="menu.html"> <h3><span>Sector 43</span><br> Chandigarh</h3></a>
+                    
+
+                        <a href="#" class="template-btn3 mt-3"> contact for ordering a lunchbox<span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- Testimonial Area End -->
+
+    <!-- Update Area Starts -->
+    <section class="update-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3>Our Best Food </h3>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-food">
+                        <div class="food-img">
+                            <img id="ci5" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            
+                            <h5 id="cn5"></h5>
+                            <p id="cd5"></p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="col-md-4">
+                    <div class="single-food">
+                        <div class="food-img">
+                            <img id="ci6" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            
+                            <h5 id="cn6"></h5>
+                            <p id="cd6"></p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-md-4">
+                    <div class="single-food">
+                        <div class="food-img">
+                            <img id="ci7" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            
+                            <h5 id="cn7"></h5>
+                            <p id="cd7"></p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="table-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3>order <span>your</span> lunchbox</h3>
+                        <p><i>Beast kind form divide night above let moveth bearing darkness.</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <form action="#">
+                        <div class="input-group mb-3 d-flex">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            </div>
+                            <input type="text" id="datepicker">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-clock-o"></i></span>
+                            </div>
+                            <input type="text" id="datepicker2">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-user-o"></i></span>
+                            </div>
+                            <input type="text">
+                        </div>
+                        <div class="table-btn text-center">
+                            <a href="#" class="template-btn template-btn2 mt-4">order your lunchbox</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Table Area End -->
+
+
+    <!-- Footer Area Starts -->
+    <footer class="footer-area text-white">
+        <div class="footer-widget section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget1">
+                            <a href="index.html"><img src="assets/images/logo/logo2.jpg" alt=""></a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-white">
+                        <div class="single-widget single-widget2 my-5 my-md-0">
+                            <h5 class="mb-4">contact us</h5>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>#234 Sect 17,chandigarh</p>
+                                </div>
+                            </div>
+                            <div class="d-flex text-white">
+                                <div class="into-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>8930518333</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-envelope-o"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>swabhi.papneja@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget3">
+                            <h5 class="mb-4">opening hours</h5>
+                            <p>Monday ...................... Closed</p>
+                            <p>Tue-Fri .............. 10 am - 12 pm</p>
+                            <p>Sat-Sun ............... 8 am - 11 pm</p>
+                            <p>Holidays ............. 10 am - 12 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-white">
+            <div class="container">
+                <div class="row">
+                   
+                     <div class="container d-flex" >
+                          <a href="https://swabhii.github.io/my-resume/">  <button class="btn btn-success"> View my Resume Website</button> </a>
+                  
+                    </div>
+                      <div class="col-lg-5 col-md-6 d-flex">
+                         <p> Copyright@Swabhi </p>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+
+    <!-- Javascript -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="assets/js/vendor/bootstrap-4.1.3.min.js"></script>
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <script src="assets/js/vendor/owl-carousel.min.js"></script>
+    <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
+    <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

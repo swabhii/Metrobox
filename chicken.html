@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Chicken Specials</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-4.1.3.min.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <script language="JavaScript" type="text/javascript" >
+  var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  document.getElementById("name11").innerHTML=response.meals[0].strMeal;
+ document.getElementById("img11").src=response .meals[0].strMealThumb;
+
+
+
+
+  document.getElementById("name22").innerHTML=response.meals[1].strMeal;
+  document.getElementById("img22").src=response .meals[1].strMealThumb;
+
+
+
+  document.getElementById("name33").innerHTML=response .meals[2].strMeal;
+  document.getElementById("img33").src=response.meals[2].strMealThumb;
+
+
+
+  document.getElementById("name44").innerHTML=response.meals[3].strMeal;
+  document.getElementById("img44").src=response.meals[3].strMealThumb;
+
+
+  document.getElementById("name55").innerHTML=response.meals[4].strMeal;
+  document.getElementById("img55").src=response.meals[4].strMealThumb;
+
+  document.getElementById("name66").innerHTML=response.meals[5].strMeal;
+  document.getElementById("img66").src=response.meals[5].strMealThumb;
+
+
+});
+
+
+
+
+</script>
+</head>
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Area Starts -->
+	<header class="header-area header-area2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo-area">
+                        <a href="index.html"><img src="assets/images/logo/logo2.jpg" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="custom-navbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>  
+                    <div class="main-menu main-menu2">
+                        <ul>
+                            <li class="active"><a href="index.html">home</a></li>
+                            <li><a href="about.html">about</a></li>
+                            <!--<li><a href="menu.html">menu</a></li>-->
+                            <!--<li><a href="#">blog</a>-->
+                                
+                            
+                            <li><a href="contact-us.html">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Banner Area Starts -->
+    <section class="banner-area banner-area2 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1><i>Are you a chicken fan?</i></h1>
+                    <p class="pt-2"><i>Here are the best Chicken dishes for you</i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End -->
+
+    <!-- Welcome Area Starts -->
+    <section class="welcome-area section-padding2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-img">
+                        <img src="assets/images/welcome-bg.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-text mt-5 mt-md-0">
+                        <h3><span class="style-change">welcome</span> <br>to food fun</h3>
+                        <p class="pt-3">Hello there! Are you looking for yummy Food? Do you want "Tastes all over the world"? Well if you do, you are exactly at the right place. MetroBox is a metro of boxes filled with happiness, and what defines happiness better than Food? We have every type of dish, veg or non veg, your choice! We have got the best for you!</p>
+                       
+                        <a href="#" class="template-btn mt-3">here are your home food tiffins</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Welcome Area End -->
+    
+    <div class="col-lg-12">
+                    <div class="section-top2 text-center p-5">
+                        <h3 class="p-4">Special <span>Chicken</span> Dishes</h3>
+                       
+                    </div>
+    </div>
+
+   <div class="container-fluid">
+    
+       
+       
+      <div class="row ">
+        <div class="col-6">
+           <h3>1. </h3><h3 id="name11"></h3>
+            <img id="img11">
+        </div>
+        <div class="col-6 ">
+            <h3>2. </h3><h3 id="name22"></h3>
+            <img id="img22">
+        </div>
+          
+      </div>
+    
+
+      <div class="row pt-4">
+        <div class="col-6">
+           <h3>3. </h3><h3 id="name33"></h3>
+            <img id="img33">
+        </div>
+        <div class="col-6 ">
+            <h3>4. </h3><h3 id="name44"></h3>
+            <img id="img44">
+        </div>
+          
+      </div>
+
+            <div class="row pt-4">
+        <div class="col-6">
+           <h3>5. </h3><h3 id="name55"></h3>
+            <img id="img55">
+        </div>
+        <div class="col-6 ">
+            <h3>6. </h3><h3 id="name66"></h3>
+            <img id="img66">
+        </div>
+          
+      </div>
+   
+
+   </div>
+
+
+    <!-- Deshes Area Starts -->
+    <div class="deshes-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3>Our<span>centres</span></h3>
+                        <!-- <p><i>Beast kind form divide night above let moveth bearing darkness.</i></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <h1>01.</h1>
+                    <div class="deshes-text">
+                        <a href="menu.html"><h3><span>Sector 17 </span><br> chandigarh</h3></a>
+                        
+                        <span class="style-change">contact Number:998768934</span>
+                        <a href="#" class="template-btn3 mt-3">contact for ordering a lunchbox <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="assets/images/deshes1.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="assets/images/deshes2.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <h1>02.</h1>
+                    <div class="deshes-text">
+                         <a href="menu.html"><h3><span>sector 43</span><br> Chandigarh</h3></a>
+                       
+                        <span class="style-change">Contact Number:999768934</span>
+                        <a href="#" class="template-btn3 mt-3">contact for ordering a lunchbox <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Deshes Area End -->
+
+    <!-- Testimonial Area Starts -->
+    
+    <!-- Testimonial Area End -->
+
+    <!-- Footer Area Starts -->
+    <footer class="footer-area">
+        <div class="footer-widget footer-widget2 section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget1">
+                            <a href="index.html"><img src="assets/images/logo/logo.jpg" alt=""></a>
+                            <p class="mt-3">Yummiest Food is all our agenda is all about. The ingredients are a mash up to make such a recipie that makes you believe in teh worth of your money spent. Afterall, it's the taste that matters the most!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget2 my-5 my-md-0">
+                            <h5 class="mb-4">contact us</h5>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>#234 Sect 17,chandigarh</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>9879675542</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-envelope-o"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>support@axiomfoods.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget3">
+                            <h5 class="mb-4">opening hours</h5>
+                            <p>Monday ...................... Closed</p>
+                            <p>Tue-Fri .............. 10 am - 12 pm</p>
+                            <p>Sat-Sun ............... 8 am - 11 pm</p>
+                            <p>Holidays ............. 10 am - 12 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright footer-copyright2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6">
+                        
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="social-icons">
+                            <ul>
+                                <li class="no-margin">Follow Us</li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                 <div class="footer-copyright text-white">
+            <div class="container">
+                <div class="row">
+                   
+                     <div class="container d-flex" >
+                          <a href="https://swabhii.github.io/my-resume/">  <button class="btn btn-success"> View my Resume Website</button> </a>
+                  
+                    </div>
+                      <div class="col-lg-5 col-md-3 d-flex">
+                         <p> Copyright@Swabhi </p>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+
+    <!-- Javascript -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="assets/js/vendor/bootstrap-4.1.3.min.js"></script>
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <script src="assets/js/vendor/owl-carousel.min.js"></script>
+    <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
+    <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
